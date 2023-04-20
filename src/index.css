@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+
+.container{
+  width: 600px;
+  margin: 20px auto;
+  border: 2px solid #ffce56;
+}
