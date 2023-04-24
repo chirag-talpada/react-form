@@ -111,7 +111,13 @@ const Form = () => {
 
   const addAchivement = () => {
 
-    if (titleInput.trim() === "" || dateInput.trim() === "") {
+   
+
+    if (titleInput.trim() === "") {
+      return
+    }
+    
+    if (dateInput.trim() === "") {
       return
     }
 
@@ -121,6 +127,7 @@ const Form = () => {
 
     setTitleInput('');
     setDateInput('');
+    
 
   }
 
@@ -198,7 +205,9 @@ const Form = () => {
             <legend>Achivements</legend>
             <div className='achivement-input-wrapper'>
               <input type='text' className='txt' value={titleInput} onChange={(e) => setTitleInput(e.target.value)} name='title' placeholder='title' />
+              {formError.title && <span className='err'>{formError.title}</span>}
               <input type='date' className='txt' value={dateInput} onChange={(e) => setDateInput(e.target.value)} name='date' />
+              {formError.acheivement_date && <span className='err'>{formError.acheivement_date}</span>}
             </div>
             <button className='add-btn full-w' onClick={addAchivement}>Add</button>
           </fieldset>
