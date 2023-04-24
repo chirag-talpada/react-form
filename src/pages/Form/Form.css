@@ -133,3 +133,24 @@
     margin-top: 3px;
     
 }
+
+.tab-achive{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tab-achive td{
+    border: 1px solid black;
+}
+
+.deleteBtn{
+    color: red;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+}
+
+.hidden{
+    display: none;
+}
